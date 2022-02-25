@@ -3,7 +3,6 @@ package com.bobocode;
 import com.bobocode.config.AppConfig;
 import com.bobocode.service.AccountService;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {
     private TestDataGenerator testDataGenerator;
@@ -33,7 +32,7 @@ public class Main {
      * TODO: Initialize the applicationContext with the context provided by {@link AppConfig}
      */
     public static void main(String[] args) {
-        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
+        ApplicationContext applicationContext;
         Main.run(applicationContext);
     }
 }
